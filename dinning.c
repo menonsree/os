@@ -38,7 +38,7 @@ int main()
 	int i;
 	
 	for(i = 0; i < N; i++)
-		sem_init(&s[i], 0, 1);
+		sem_init(&s[i], 0, 1); //0 means shared between threads of a process.
 	
 	for(i = 0; i < N; i++)
 		pthread_create(&p[i], NULL, (void *) &philo, (void *) i);
